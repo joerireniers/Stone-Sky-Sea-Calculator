@@ -185,7 +185,7 @@ hr {
 
 
 
-#btn-wrapper {
+.btn-wrapper {
     display: flex;
     justify-content: center;
 }

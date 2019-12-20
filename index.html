@@ -120,7 +120,7 @@
     <div class="fight-container container-small">
         <h2>Select a fight:</h2>
 
-        <div id="btn-wrapper">
+        <div class="btn-wrapper">
             <button class="btn xpac-btn" onclick="xpacSelect('shadowbringers')">Shadowbringers</button>
             <button class="btn xpac-btn" onclick="xpacSelect('stormblood')">Stormblood</button>
             <button class="btn xpac-btn" onclick="xpacSelect('heavensward')">Heavensward</button>
@@ -129,73 +129,79 @@
 
         <div class="dropdown" id="shadowbringers">
             <select id="fight-input3" onchange="fightSelect(3)">
-                <option value="" selected disabled hidden>Shadowbringers</option>
-                <option value="hades">Hades Normal</option>
-                <option value="titania">Titania Extreme</option>
-                <option value="innocence">Innocence Extreme</option>
-                <option value="hades_ex">Hades Extreme</option>
-                <option value="eden">Eden</option>
-                <option value="e1s">Eden's Gate: Resurrection (E1S)</option>
-                <option value="e2s">TEden's Gate: Descent (E2S)</option>
-                <option value="e3s">Eden's Gate: Inundation (E3S)</option>
-                <option value="e4s">Eden's Gate: Sepulture (E4S)</option>
+                <optgroup label="Shadowbringers">
+                    <option value="" selected disabled hidden>Select here...</option>
+                    <option value="hades">Hades Normal</option>
+                    <option value="titania">Titania Extreme</option>
+                    <option value="innocence">Innocence Extreme</option>
+                    <option value="hades_ex">Hades Extreme</option>
+                    <option value="eden">Eden</option>
+                    <option value="e1s">Eden's Gate: Resurrection (E1S)</option>
+                    <option value="e2s">TEden's Gate: Descent (E2S)</option>
+                    <option value="e3s">Eden's Gate: Inundation (E3S)</option>
+                    <option value="e4s">Eden's Gate: Sepulture (E4S)</option>
+                </optgroup>
             </select>
         </div>
 
         <div class="dropdown hidden" id="stormblood">
             <select id="fight-input2" onchange="fightSelect(2)">
-                <option value="" selected disabled hidden>Stormblood</option>
-                <option value="shinryu">Shinryu Normal</option>
-                <option value="susano">Susano Extreme</option>
-                <option value="lakshmi">Lakshmi Extreme</option>
-                <option value="shinryu_ex">Shinryu Extreme</option>
-                <option value="byakko">Byakko Extreme</option>
-                <option value="tsukyomi">Tsukyomi Extreme</option>
-                <option value="suzaki">Suzaku Extreme</option>
-                <option value="seiryu">Seiryu Extreme</option>
-                <option value="delta">Deltascape</option>
-                <option value="o1s">Deltascape V1.0 Savage (O1S)</option>
-                <option value="o2s">Deltascape V2.0 Savage (O2S)</option>
-                <option value="o3s">Deltascape V3.0 Savage (O3S)</option>
-                <option value="o4s">Deltascape V4.0 Savage (O4S)</option>
-                <option value="sigma">Sigmascape</option>
-                <option value="o5s">Sigmascape V1.0 Savage (O5S)</option>
-                <option value="o6s">Sigmascape V2.0 Savage (O6S)</option>
-                <option value="o7s">Sigmascape V3.0 Savage (O7S)</option>
-                <option value="o8s">Sigmascape V4.0 Savage (O8S)</option>
-                <option value="alpha">Alphascape</option>
-                <option value="o9s">Alphascape V1.0 Savage (O9S)</option>
-                <option value="o10s">Alphascape V2.0 Savage (O10S)</option>
-                <option value="o11s">Alphascape V3.0 Savage (O11S)</option>
-                <option value="o12s">Alphascape V4.0 Savage (O12S)</option>
+                <optgroup label="Stormblood">
+                    <option value="" selected disabled hidden>Select here...</option>
+                    <option value="shinryu">Shinryu Normal</option>
+                    <option value="susano">Susano Extreme</option>
+                    <option value="lakshmi">Lakshmi Extreme</option>
+                    <option value="shinryu_ex">Shinryu Extreme</option>
+                    <option value="byakko">Byakko Extreme</option>
+                    <option value="tsukyomi">Tsukyomi Extreme</option>
+                    <option value="suzaki">Suzaku Extreme</option>
+                    <option value="seiryu">Seiryu Extreme</option>
+                    <option value="delta">Deltascape</option>
+                    <option value="o1s">Deltascape V1.0 Savage (O1S)</option>
+                    <option value="o2s">Deltascape V2.0 Savage (O2S)</option>
+                    <option value="o3s">Deltascape V3.0 Savage (O3S)</option>
+                    <option value="o4s">Deltascape V4.0 Savage (O4S)</option>
+                    <option value="sigma">Sigmascape</option>
+                    <option value="o5s">Sigmascape V1.0 Savage (O5S)</option>
+                    <option value="o6s">Sigmascape V2.0 Savage (O6S)</option>
+                    <option value="o7s">Sigmascape V3.0 Savage (O7S)</option>
+                    <option value="o8s">Sigmascape V4.0 Savage (O8S)</option>
+                    <option value="alpha">Alphascape</option>
+                    <option value="o9s">Alphascape V1.0 Savage (O9S)</option>
+                    <option value="o10s">Alphascape V2.0 Savage (O10S)</option>
+                    <option value="o11s">Alphascape V3.0 Savage (O11S)</option>
+                    <option value="o12s">Alphascape V4.0 Savage (O12S)</option>
+                </optgroup>
             </select>
         </div>
 
         <div class="dropdown hidden" id="heavensward">
             <select id="fight-input1" onchange="fightSelect(1)">
-                <option value="" selected disabled hidden>Heavensward</option>
-                <option value="basic">Basic Training</option>
-                <option value="bismarck">Bismarck Extreme</option>
-                <option value="thordan">Thordan Extreme</option>
-                <option value="sephirot">Sephirot Extreme</option>
-                <option value="nidhogg">Nidhogg Extreme</option>
-                <option value="sophia">Sophia Extreme</option>
-                <option value="zurvan">Zurvan Extreme</option>
-                <option value="gordias">Gordias</option>
-                <option value="a1s">The Fist of the Father (A1S)</option>
-                <option value="a2s">The Cuff of the Father (A2S)</option>
-                <option value="a3s">The Arm of the Father (A3S)</option>
-                <option value="a4s">The Burden of the Father (A4S)</option>
-                <option value="midas">Midas</option>
-                <option value="a5s">The Fist of the Son (A5S)</option>
-                <option value="a6s">The Cuff of the Son (A6S)</option>
-                <option value="a7s">The Arm of the Son (A7S)</option>
-                <option value="a8s">The Burden of the Son (A8S)</option>
-                <option value="creator">Creator</option>
-                <option value="a9s">The Fist of the Son (A9S)</option>
-                <option value="a10s">The Cuff of the Son (A10S)</option>
-                <option value="a11s">The Arm of the Son (A11S)</option>
-                <option value="a12s">The Burden of the Son (A12S)</option>
+                <optgroup label="Heavensward">
+                    <option value="" selected disabled hidden>Select here...</option>
+                    <option value="basic">Basic Training</option>
+                    <option value="bismarck">Bismarck Extreme</option>
+                    <option value="thordan">Thordan Extreme</option>
+                    <option value="sephirot">Sephirot Extreme</option>
+                    <option value="nidhogg">Nidhogg Extreme</option>
+                    <option value="sophia">Sophia Extreme</option>
+                    <option value="zurvan">Zurvan Extreme</option>
+                    <option value="gordias">Gordias</option>
+                    <option value="a1s">The Fist of the Father (A1S)</option>
+                    <option value="a2s">The Cuff of the Father (A2S)</option>
+                    <option value="a3s">The Arm of the Father (A3S)</option>
+                    <option value="a4s">The Burden of the Father (A4S)</option>
+                    <option value="midas">Midas</option>
+                    <option value="a5s">The Fist of the Son (A5S)</option>
+                    <option value="a6s">The Cuff of the Son (A6S)</option>
+                    <option value="a7s">The Arm of the Son (A7S)</option>
+                    <option value="a8s">The Burden of the Son (A8S)</option>
+                    <option value="creator">Creator</option>
+                    <option value="a9s">The Fist of the Son (A9S)</option>
+                    <option value="a10s">The Cuff of the Son (A10S)</option>
+                    <option value="a11s">The Arm of the Son (A11S)</option>
+                    <option value="a12s">The Burden of the Son (A12S)</option>
+                </optgroup>
             </select>
         </div>
 
@@ -213,7 +219,7 @@
         <label for="hp-left">HP left in %:</label>
         <input type="number" min="0" max="100" id="hp-left" placeholder="HP left" onchange="clearTimeLeft()">
 
-        <div id="btn-wrapper">
+        <div class="btn-wrapper">
             <button class=" btn calc-btn" onclick="calcDps()">Calculate DPS</button>
         </div>
     </div>

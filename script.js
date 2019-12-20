@@ -142,6 +142,8 @@ function xpacSelect(expac) {
     document.getElementById("shadowbringers").classList.add("hidden");
 
     document.getElementById(expac).classList.remove("hidden");
+
+    
 }
 
 function calcDps() {
