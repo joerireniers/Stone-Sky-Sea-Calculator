@@ -69,16 +69,18 @@ hr {
     font-size: 26px;
     font-weight: 400;
     margin: 0;
+    float: left;
+    line-height: 26px;
 }
 
 .topnav a {
     font-size: 17px;
     color: #ffa537;
     text-decoration: none;
-    position: absolute;
+    float: right;
     right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
+    vertical-align: middle;
+    line-height: 26px;
 }
 
 .grid-container {
@@ -220,6 +222,13 @@ input[type=number] {
     font-weight: bold;
 }
 
+
+@media screen and (min-width: 1900px) {
+    .grid-container {
+        grid-template-columns: 20%;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .grid-container {
         grid-template-columns: 40%;
@@ -238,9 +247,17 @@ input[type=number] {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
     .grid-container {
         grid-template-columns: 85%;
+    }
+
+    .btn-wrapper {
+        display: block;
+    }
+
+    .help {
+        
     }
 }
 
