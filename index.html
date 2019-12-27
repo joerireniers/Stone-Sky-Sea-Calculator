@@ -12,14 +12,14 @@
 <div class="bg-img"></div>
 
 
-<div class="topnav">
+<header class="topnav">
     <h1>Stone Sky Sea Calculator | FFXIV</h1>
-    <a href="#">Need help?</a>
-</div>
+    <a href="#help">Need help?</a>
+</header>
 
 
 <div class="grid-container">
-    <div class="job-container container-small">
+    <section class="job-container container-small">
         <h2>Select your job:</h2>
         <p>Tanks</p>
 
@@ -115,17 +115,30 @@
             <input type="radio" class="job-btn" name="job-input" value="16" id="rdm-btn" onclick="jobSelect()">
             <img class="job-btn-label" src="images/rdm.png" alt="Red Mage Icon">
         </label>
-    </div>
+    </section>
 
-    <div class="fight-container container-small">
+    <section class="fight-container container-small">
         <h2>Select a fight:</h2>
 
-        <div class="btn-wrapper">
+       <!-- <div class="btn-wrapper">
             <button class="btn xpac-btn" onclick="xpacSelect('shadowbringers')">Shadowbringers</button>
             <button class="btn xpac-btn" onclick="xpacSelect('stormblood')">Stormblood</button>
             <button class="btn xpac-btn" onclick="xpacSelect('heavensward')">Heavensward</button>
         </div>
+        -->
 
+        <div class="btn-wrapper">
+
+            <input type="radio" class="xpac-btn" name="xpac-input" id="shb" value="shadowbringers" checked onclick="xpacSelect()">
+            <label for="shb" class="btn">Shadowbringers</label>   
+            
+            <input type="radio" class="xpac-btn" name="xpac-input" id="sb" value="stormblood" onclick="xpacSelect()">
+            <label for="sb" class="btn">Stormblood</label>
+            
+            <input type="radio" class="xpac-btn" name="xpac-input" id="hw" value="heavensward" onclick="xpacSelect()">
+            <label for="hw" class="btn">Heavensward</label>
+            
+        </div>
 
         <div class="dropdown" id="shadowbringers">
             <select id="fight-input3" onchange="fightSelect(3)">
@@ -154,7 +167,7 @@
                     <option value="shinryu_ex">Shinryu Extreme</option>
                     <option value="byakko">Byakko Extreme</option>
                     <option value="tsukyomi">Tsukyomi Extreme</option>
-                    <option value="suzaki">Suzaku Extreme</option>
+                    <option value="suzaku">Suzaku Extreme</option>
                     <option value="seiryu">Seiryu Extreme</option>
                     <option value="delta">Deltascape</option>
                     <option value="o1s">Deltascape V1.0 Savage (O1S)</option>
@@ -205,10 +218,9 @@
             </select>
         </div>
 
+    </section>
 
-    </div>
-
-    <div class="kill-container container-small">
+    <section class="kill-container container-small">
         <h2>Did you kill the striking dummy?</h2>
 
         <h3>Yes</h3>
@@ -222,16 +234,30 @@
         <div class="btn-wrapper">
             <button class=" btn calc-btn" onclick="calcDps()">Calculate DPS</button>
         </div>
-    </div>
+    </section>
 
-    <div class="result-container container-small">
+    <section class="result-container container-small">
         <p id="result-text"></p>
-    </div>
+        <p id="hp-text"></span></p>
+        <p id="dps-text"></span></p>
+    </section>
+
+    <section class="info-container container-small" id="help">
+        <h4>Stone Sky Sea DPS Calculator for FFXIV</h4>
+
+        <p>To use the Stone Sky Sea Calculator you will need to note down the time remaining if you didn't kill the dummy or the HP remaining (in %) if you killed him.</p>
+
+        <p>If you can't see the HP remaining go to <strong>System > Character Configuration > UI Settings </strong>and make sure <strong>"Display target's remaining HP"</strong> is turned on.</p>
+        <br>
+        <br>
+        <ul>
+            <li>Last updated: 27 December 2019</li>
+            <li>Patch 5.18</li>
+        </ul>
+
+    </section>
 
 </div>
-
-    
-
 
 
 

@@ -1,4 +1,4 @@
-var fight, job, time_input, hp_input;
+let fight, job, time_input, hp_input;
 
 // HP Data
 const hpData = {
@@ -64,7 +64,7 @@ const hpData = {
 
     tsukyomi: [609712, 663527, 610285, 609712, 589675, 531280, 491205, 898825, 845010, 867910, 925160, 797492, 818102, 818102, 982982, 937755, 886802],
 
-    suzako: [688145, 748830, 689290, 688145, 668680, 602842, 557042, 1020195, 958365, 984700, 1064277, 905122, 928022, 928022, 1156450, 1063705, 1036797],
+    suzaku: [688145, 748830, 689290, 688145, 668680, 602842, 557042, 1020195, 958365, 984700, 1064277, 905122, 928022, 928022, 1156450, 1063705, 1036797],
 
     seiryu: [729937, 794057, 731082, 729937, 711045, 640627, 592537, 1094620, 1019050, 1046530, 1131260, 961800, 1011607, 1011607, 1229157, 1131260, 1102062],
 
@@ -132,7 +132,8 @@ function clearHpLeft() {
     hp_input.value = 0;
 }
 
-function xpacSelect(expac) {
+function xpacSelect() {
+    let xpac = document.querySelector('input[name="xpac-input"]:checked').value;
     document.getElementById("heavensward").classList.remove("hidden");
     document.getElementById("stormblood").classList.remove("hidden");
     document.getElementById("shadowbringers").classList.remove("hidden");
@@ -141,19 +142,21 @@ function xpacSelect(expac) {
     document.getElementById("stormblood").classList.add("hidden");
     document.getElementById("shadowbringers").classList.add("hidden");
 
-    document.getElementById(expac).classList.remove("hidden");
-
+    document.getElementById(xpac).classList.remove("hidden");
     
 }
 
 function calcDps() {
-    var dps, hpLeft, maxHp, timeLeft, maxTime, result_text;
+    let dps, hpLeft, maxHp, timeLeft, maxTime, result_text, dps_needed;
 
     // Set Variables
     result_text = document.querySelector("#result-text");
+    hp_text = document.querySelector("#hp-text");
+    dps_text = document.querySelector("#dps-text");
     maxTime = 180;
     timeLeft = time_input.value;
     hpLeft = hp_input.value;
+    
 
     // Calculate DPS
 
@@ -176,9 +179,13 @@ function calcDps() {
         result_text.classList.add("input-error");
     } else {
         maxHp = hpData[fight][job];
+        dps_needed = maxHp / maxTime;
 
+        // DPS Formula
         dps = ((100 - hpLeft) * maxHp) / 100 / (maxTime - timeLeft);
         // Update UI
         result_text.innerHTML = "You did <span id=result>" + dps.toFixed(2) + " DPS!</span>";
+        hp_text.innerHTML = "The dummy has " + maxHp + " HP.";
+        dps_text.innerHTML = "You need " + dps_needed.toFixed(2) + " dps to kill the dummy.";
     }
 }
