@@ -114,20 +114,20 @@ const hpData = {
 hp_input = document.getElementById("hp-left");
 time_input = document.getElementById("time-left");
 
-
 function jobSelect() {
     job = document.querySelector('input[name="job-input"]:checked').value;
 }
 
 function fightSelect(num) {
-    let fight_input = document.getElementById("fight-input" + num);
-    fight = fight_input.value;
+    fight = document.getElementById("fight-input" + num).value;
 }
 
+// set time to 0
 function clearTimeLeft() {
     time_input.value = 0;
 }
 
+// set hp to 0
 function clearHpLeft() {
     hp_input.value = 0;
 }
@@ -142,8 +142,7 @@ function xpacSelect() {
     document.getElementById("stormblood").classList.add("hidden");
     document.getElementById("shadowbringers").classList.add("hidden");
 
-    document.getElementById(xpac).classList.remove("hidden");
-    
+    document.getElementById(xpac).classList.remove("hidden");  
 }
 
 function calcDps() {
@@ -153,6 +152,7 @@ function calcDps() {
     result_text = document.querySelector("#result-text");
     hp_text = document.querySelector("#hp-text");
     dps_text = document.querySelector("#dps-text");
+    
     maxTime = 180;
     timeLeft = time_input.value;
     hpLeft = hp_input.value;
